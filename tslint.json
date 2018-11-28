@@ -1,0 +1,25 @@
+{
+  "extends": ["tslint:recommended", "tslint-react", "tslint-config-prettier"],
+  // "defaultSeverity": "warning",
+  "rules": {
+    "ordered-imports": false,
+    "object-literal-sort-keys": false,
+    // interface name shouldn't has prefix I
+    "interface-name": [true, "never-prefix"],
+    // only ban console.log
+    "no-console": false,
+    "jsx-boolean-value": false,
+    "jsx-no-lambda": false,
+    "jsx-no-multiline-js": false,
+    "only-arrow-functions": false
+  },
+  "linterOptions": {
+    "exclude": [
+      "**/*.js",
+      "**/*.jsx",
+      "config/**/*.js",
+      "node_modules/**/*.ts",
+      "coverage/lcov-report/*.js"
+    ]
+  }
+}
