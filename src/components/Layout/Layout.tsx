@@ -13,6 +13,10 @@ const Layout: React.FunctionComponent = ({ children }) => (
     <Link href='/counter'>
       <a>Counter</a>
     </Link>
+    {' · '}
+    <Link href='/time'>
+      <a>Time</a>
+    </Link>
     <div className="layout__viewport">
       {children}
     </div>

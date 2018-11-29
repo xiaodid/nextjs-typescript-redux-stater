@@ -1,6 +1,6 @@
 import { createStore, applyMiddleware, combineReducers, Store } from "redux";
 import thunkMiddleware from "redux-thunk";
-import counter, { CounterState, counterInitialState } from "../reducers/counter";
+import counter, { CounterState, counterInitialState } from "../routes/counter/modules/counter";
 import { ActionWithPayload } from "./common";
 
 // define root state here

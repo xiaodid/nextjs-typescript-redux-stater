@@ -1,10 +1,10 @@
-import { ReducerHandlers, createAction, createReducer, ActionWithPayload, asyncActionCreateFn } from "../store/common";
+import { ReducerHandlers, createAction, createReducer, ActionWithPayload, asyncActionCreateFn } from "../../../store/common";
 export interface CounterState {
   counter: number;
 }
 
 export const counterInitialState: CounterState = {
-  counter: 0,
+  counter: 10,
 };
 
 const INCREMENT = "INCREMENT";
@@ -21,7 +21,7 @@ const doubleAsync: asyncActionCreateFn<Promise<any>, CounterState, {}, ActionWit
           payload: payload.time,
         })
         resolve()
-      }, 200)
+      }, 500)
     })
   }
 }

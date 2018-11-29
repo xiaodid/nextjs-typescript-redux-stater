@@ -1,8 +1,5 @@
 import * as React from 'react'
-import { connect } from 'react-redux'
-import Layout from '../src/components/Layout/Layout'
-import { counterActions } from '../src/reducers/counter'
-import { RootState } from 'src/store/createStore';
+import Layout from '../../../../src/components/Layout/Layout'
 
 export interface CounterProps {
   counter: number
@@ -43,8 +40,4 @@ class Counter extends React.Component<CounterProps> {
   }
 }
 
-const mapStateToProps = (state: RootState) => ({
-  counter: state.counter ? state.counter.counter : 0,
-})
-
-export default connect(mapStateToProps, counterActions)(Counter)
+export default Counter

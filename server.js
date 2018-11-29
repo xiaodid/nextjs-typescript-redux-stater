@@ -2,6 +2,7 @@
 const express = require('express')
 const next = require('next')
 const compression = require('compression')
+const moment = require('moment')
 
 
 const dev = process.env.NODE_ENV !== 'production'
@@ -13,6 +14,12 @@ app.prepare()
   const server = express()
 
   server.use(compression())
+
+  server.post('/getservertime', (req, res) => {
+    res.json({
+      serverTime: moment().format('YYYY-MM-DD hh:mm:ss')
+    })
+  })
 
   server.get('/p/:id', (req, res) => {
     const actualPage = '/post'
