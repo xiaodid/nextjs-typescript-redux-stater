@@ -26,11 +26,11 @@ class Time extends React.PureComponent<TimeProps> {
     const { serverTime } = this.props
     return (
       <Layout>
-        <h1>
+        <p>
           {
             `Server Time: ${serverTime}`
           }
-        </h1>
+        </p>
       </Layout>
     )
   }
